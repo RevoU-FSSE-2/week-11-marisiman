@@ -3,12 +3,19 @@
 const { MongoClient } = require('mongodb')
 
 const databaseMiddleware = async (req, res, next) => {
-  const mongoClient = await new MongoClient("mongodb://127.0.0.1:27017").connect()
+  try {
+  const mongoClient = await new MongoClient("mongodb://mongo:MkIak5NxzVroNzP5bk0p@containers-us-west-203.railway.app:6164").connect()
   db = mongoClient.db('assignment-11')
   
   req.db = db
   
-  next()
+  next();
+}
+
+catch (error) {
+  console.log(error, `<=================== error ==================`);
+}
+
 }
 
 module.exports = databaseMiddleware
