@@ -138,7 +138,7 @@ paths:
     post:
       tags:
         - "User/Admin"
-      summary: Register a new user
+      summary: Register in here
       requestBody:
         required: true
         content:
@@ -323,7 +323,7 @@ paths:
         - bearerAuth: []
       tags:
         - "Admin Request"
-      summary: Soft delete a user request
+      summary: Soft delete a spice request
       parameters:
         - name: id
           in: path
@@ -403,7 +403,7 @@ paths:
         - bearer: []
       tags:
         - 'User/ Admin Request'
-      summary: 'Create a new spices request'
+      summary: 'Create a new user request'
       requestBody:
         content:
           application/json:
